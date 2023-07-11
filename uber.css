@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/uber-move-text');
+          
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  appearance: none;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Uber Move Text', sans-serif;
+}
+
+body{
+    background-color: brown;
+}
+
+.container{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+header{
+    margin: 0px 115px;
+    padding: 0px 40px;
+}
