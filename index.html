@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="head-first-wrapper">
-            <header>
+            <div class="header">
                 <div class="container-fluid">
                     <div class="navb-logo">
                         <img src="assets/menu.png" id="menu" alt="menu">
@@ -33,26 +33,28 @@
                             </li>
                         </ul>
                     </div>
-            </header>
-            <div class="first-section">
-                
+                </div>
+            </div>
+            <div class="banner">
+                <div class="container-fluid">
+                    <h1>Order food to your door</h1>
+                    <div class="inline">
+                        <div class="form-input">
+                            <input type="text" name="search-query" placeholder="Enter delivery address">
+                        </div>
+                        <div class="form-input">
+                            <select class="category-dropdown">
+                                <option value="option1">Deliver now</option>
+                                <option value="option2">Schedule for later</option>
+                            </select>                    
+                        </div>
+                        <button type="submit">Find food</button>
+                    </div>
+                    <span class="link"><a href="#">Sign In</a> for your recent addresses</span>
+                </div>
             </div>
         </div>
-
-        <div class="banner">
-            <img src="/assets/yellow.png" alt="Banner Image">
-            <div class="banner-text">
-                <h1>Order food to your door</h1>
-                <!-- <i class="fa-solid fa-location-dot" style="color: #000000;"></i> -->
-                <input type="text" name="search-query" placeholder="Enter delivery address"/>
-                <select class="category-dropdown">
-                    <option value="option1">Deliver now</option>
-                    <option value="option2">Schedule for later</option>
-                    </select>
-                    <button type="submit">Find food</button>
-                <p>Sign In for your recent addresses</p>
-        </div>
-    </div>
+        <!-- <img src="assets/yellow.png" id="bannerImg" alt="Background image"> -->
     </div>
 </body>
 </html>
