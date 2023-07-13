@@ -77,8 +77,8 @@ header{
     width: auto;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;800&display=swap');
-
+@import url('https://fonts.cdnfonts.com/css/uber-move-text');
+          
 *{
   margin: 0;
   padding: 0;
@@ -89,7 +89,7 @@ header{
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Uber Move Text', sans-serif;
 }
 
 .container{
@@ -102,8 +102,8 @@ header{
     width: 100vw;
     display: flex;
     align-items: center;
-    height: 110px;
-    background-color: rgb(241, 62, 62);
+    height: 95px;
+    background-color: white;
 }
 
 header .container-fluid{
@@ -117,20 +117,22 @@ header .container-fluid{
 header .navb-logo{
     display: flex;
     align-items: center;
-    gap: 30px;
-    border: 1px solid black;
+    gap: 36px;
     justify-content: space-between;
 }
 
 header .navb-logo #menu{
-    width: auto;
-    height: 16px;
+    margin-top: 2px;
+    margin-left: 1px;
+    width: 18px;
+    height: 17px;
+    cursor: pointer;
 }
 
 header .navb-items{
     height: fit-content;
-    background-color: #0072b1;
     padding: 0;
+    margin-right: 17px;
 }
 
 header .main-nav{
@@ -141,32 +143,38 @@ header .main-nav{
     position: relative;
     margin: 0;
     padding: 0;
-    background-color: #333;
 }
 
-header a{
+header .item a{
     padding: 12px 16px;
-    margin: 0px 10px;
-    font-size: 15px;
+    font-size: 16px;
+    margin: 0;
     text-decoration: none;
     font-weight: 500;
     border-radius: 25px;
     display: flex;
     align-items: center;
-    gap: 5px;
     justify-content: center;
+}
+
+header .item  #logIn:hover{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 header #logIn{
     background-color: white;
     color: black;
-    padding: 9px 12px;
-    gap: 1px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 16px;
+    margin-right: 16px;
+    gap: 7px;
 }
 
 header #logIn img{
-    height: 28px;
-    width: auto;
+    height: 18px;
+    width: 15px;
     margin: 0;
 }
 
@@ -175,7 +183,12 @@ header #signUp{
     background-color: black;
 }
 
-header #dropdown ul{
+header .item  #signUp:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* header #dropdown ul{
     display: none; 
     margin-top: 0.5rem;
     padding-top: 1rem;
@@ -215,7 +228,7 @@ header #dropdown ul li:hover{
     color: #fff;
     background: #333;
     text-shadow: none;
-}
+} */
 
 /* 
 header .item a:hover:after{
