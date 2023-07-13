@@ -1,82 +1,3 @@
-/* @import url('https://fonts.cdnfonts.com/css/uber-move-text');
-          
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  appearance: none;
-  border: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: 'Uber Move Text', sans-serif;
-}
-
-body{
-    background-color: brown;
-    padding: 0;
-}
-
-.container{
-    margin: 0;
-    padding: 0;
-}
-
-header{
-    width: 100%;
-    margin: 0;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(199, 146, 78);
-}
-
-.left-header{
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-}
-
-.left-header #menu{
-    font-size: 20px;
-}
-
-.right-header{
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-}
-
-.right-header a{
-    padding: 12px 16px;
-    margin: 0px 10px;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
-}
-
-.right-header #logIn{
-    background-color: white;
-    color: black;
-}
-
-.right-header #signUp{
-    color: white;
-    background-color: black;
-}
-
-.right-header img{
-    height: 30px;
-    width: auto;
-} */
-
 @import url('https://fonts.cdnfonts.com/css/uber-move-text');
           
 *{
@@ -98,12 +19,17 @@ header{
     padding: 0;
 }
 
+.head-first-wrapper{
+    background-image: url('assets/yellow.png');
+    position: relative;
+}
+
 header{
     width: 100vw;
     display: flex;
     align-items: center;
     height: 95px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 header .container-fluid{
