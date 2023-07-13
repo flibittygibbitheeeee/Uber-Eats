@@ -743,3 +743,79 @@ footer .one img{
         height: 3.5rem;
     }
 }
+
+.banner {
+    width: 120%; /* Adjust the width of the container as needed */
+    height: auto;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-40%, -50%);
+    text-align: left;
+    color: black;
+    
+}
+
+.banner-text > i {
+    position: fixed;
+    top: 60%;
+    left: 3%;
+    transform: translate(-40%, -50%);
+    text-align: left;
+    color: black;
+    
+}
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/83a314e1b88d789f.woff2') format('woff2'),
+         url('/fonts/83a314e1b88d789f.woff2') format('woff');
+}
+
+.banner-text h1 {
+    font-size: 52px;
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-weight: 700;
+    
+}
+
+.banner-text p {
+    font-size: 15px;
+}
+
+input[type="text"] {
+    padding: 15px;
+    width: 550px;
+    cursor: pointer;
+}
+
+
+select {
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+button[type="submit"] {
+    padding: 20px 10px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+button[type="submit"]:hover{
+    background-color: rgb(51, 51, 51);
+}
+
+
