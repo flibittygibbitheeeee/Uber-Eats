@@ -161,6 +161,7 @@ body{
     padding: 8px 16px 8px 0px;
     display: flex;
     gap: 2px;
+    font-size: 16px;
     align-items: center;
     background-color: white;
 }
@@ -168,7 +169,6 @@ body{
 .inline .form-input input{
     padding: 8px 16px 8px 0px;
     width: 100%;
-    font-size: 16px;
 }
 
 .form-input input::placeholder {
@@ -192,6 +192,7 @@ body{
     width: 300px;
     height: 100vh;
     position: fixed;
+    padding: 24px;
     top: 0;
     left: -300px;
     background-color: #fff;
@@ -202,6 +203,123 @@ body{
 
 .sidebar.open {
     left: 0;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebar #signup{
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 14px 16px 15px 16px;
+    background: black;
+}
+
+.sidebar #login{
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #eeeeee;
+    padding: 14px 16px 15px 16px;
+    color: black;
+}
+
+.sidebar .ul-container{
+    width: 100%;
+    margin-top: 22px;
+}
+
+.sidebar ul{
+    padding: 0;
+}
+
+.sidebar ul li{
+    margin-bottom: 11px;
+    width: 100%;
+}
+
+.sidebar ul li a{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 12px 0px;
+    color: #333;
+}
+
+.side-foot{
+    position: absolute;
+    bottom: 23px;
+}
+
+.side-foot-up{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.side-foot-up img{
+    height: 56px;
+    width: auto;
+}
+
+.side-foot-up p{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.side-foot-dwn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 16px 0px 8px;
+}
+
+.side-foot-dwn a{
+    margin-left: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.iphone, .android{
+    padding: 10px 14px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: #eeeeee;
+}
+
+.iphone i{
+    font-size: 15px;
+    color: black;
+    margin-bottom: 2px;
+}
+
+.android img{
+    height: 14px;
+    width: auto;
+    margin-left: 1px;
+    margin-bottom: 2px;
 }
 
 /*  .head-first-wrapper #bannerImg {
