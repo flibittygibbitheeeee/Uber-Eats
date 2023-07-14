@@ -14,12 +14,12 @@
     <div class="container">
         <div class="head-first-wrapper">
             <div class="header">
-                <div class="container-fluid">
+                <div class="container-fluid" id="header-container-fluid">
                     <div class="navb-logo">
                         <img src="assets/menu.png" id="menu" alt="menu">
                         <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
                     </div>
-        
+            
                     <div class="navb-items">
                         <ul class="main-nav">
                             <li class="item">
@@ -35,14 +35,57 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="sidebar" class="sidebar">
+                <div class="signup">
+                    <a href="#">Sign up</a>
+                </div>
+                <div class="login">
+                    <a href="#">Log in</a>
+                </div>
+                <div class="ul-container">
+                    <ul>
+                        <li>
+                            <a href="#">Create a business account</a>
+                        </li>
+                        <li>
+                            <a href="#">Add your restaurant</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign up to deliver</a>
+                        </li>
+                    </ul>                    
+                </div>
+                <div class="side-foot">
+                    <div class="side-foot-up">
+                       <img src="assets/ubereats.png" alt="ubereats">
+                        <p>There's more to love in the app.</p>                                                      
+                    </div>
+                    <div class="side-foot-dwn">
+                        <div class="iphone">
+                            <i class="fa-brands fa-apple"></i>
+                            <a href="#">iPhone</a>
+                        </div>
+                        <div class="android">
+                            <i class="fa-brands fa-apple"></i>
+                            <a href="#">Android</a>
+                        </div>                                                        
+                     </div>
+                </div>
+            </div>
+            
             <div class="banner">
-                <div class="container-fluid">
+                <div class="container-fluid" id="banner-container-fluid">
                     <h1>Order food to your door</h1>
                     <div class="inline">
                         <div class="form-input">
+                            <div class="img-icon">
+                                <img src="assets/location-dot-solid.svg" alt="location icon">
+                            </div>
                             <input type="text" name="search-query" placeholder="Enter delivery address">
                         </div>
                         <div class="form-input">
+                            <i class="fa-solid fa-clock-three"></i>
                             <select class="category-dropdown">
                                 <option value="option1">Deliver now</option>
                                 <option value="option2">Schedule for later</option>
@@ -56,5 +99,22 @@
         </div>
         <!-- <img src="assets/yellow.png" id="bannerImg" alt="Background image"> -->
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var menuButton = document.getElementById("menu");
+            var sidebar = document.getElementById("sidebar");
+
+            menuButton.addEventListener("click", function() {
+                sidebar.classList.add("open");
+            });
+
+            document.addEventListener("click", function(event) {
+                if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+                    sidebar.classList.remove("open");
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
