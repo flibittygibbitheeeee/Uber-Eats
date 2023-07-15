@@ -17,7 +17,7 @@
                 <div class="container-fluid" id="header-container-fluid">
                     <div class="navb-logo">
                         <img src="assets/menu.png" id="menu" alt="menu">
-                        <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
+                        <a href="http://localhost:8080/Kodego/Uber-Eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
                     </div>
             
                     <div class="navb-items">
@@ -76,58 +76,214 @@
                 <div class="container-fluid" id="banner-container-fluid">
                     <h1>Order food to your door</h1>
                     <div class="inline">
-                        <div class="form-input">
+                        <div class="form-input" id="form-input-location">
                             <div class="img-icon">
                                 <img src="assets/location-dot-solid.svg" alt="location icon">
                             </div>
                             <input type="text" name="search-query" placeholder="Enter delivery address">
                         </div>
-                        <div class="form-input">
-                            <i class="fa-solid fa-clock-three"></i>
+                        <div class="form-input" id="form-input-dropdown">
+                            <img src="assets/clock.png" alt="clock">
                             <select class="category-dropdown">
                                 <option value="option1">Deliver now</option>
                                 <option value="option2">Schedule for later</option>
-                            </select>                    
+                            </select>
+                            <span class="material-icons-outlined">expand_more</span>                  
                         </div>
-                        <button type="submit">Find food</button>
+                        <button type="submit">Find Food</button>
                     </div>
                     <div class="link"><a href="#">Sign In</a> for your recent addresses</div>
                 </div>
             </div>
+        </div>
 
-            <div class="card-container">
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <img src="assets/88d55f7112efe55f.webp" alt="Feed your employees" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Feed your employees</h5>
-                                <a href="#">Create a business account</a>
-                            </div>
+        <div class="card-container" id="image-container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/88d55f7112efe55f.webp" alt="Feed your employees" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Feed your employees</h5>
+                            <a href="#">Create a business account</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="assets/711d51ca1b458931.webp" alt="Your restaurant, delivered" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Your restaurant, delivered</h5>
-                                <a href="#">Add your restaurant</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/711d51ca1b458931.webp" alt="Your restaurant, delivered" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Your restaurant, delivered</h5>
+                            <a href="#">Add your restaurant</a>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="assets/16522a701585873b.webp" alt="Deliver with Uber Eats" class="img-fluid">
-                            <div class="card-body">
-                                <h5 class="card-title">Deliver with Uber Eats</h5>
-                                <a href="#">Sign up to deliver</a>
-                            </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/16522a701585873b.webp" alt="Deliver with Uber Eats" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Deliver with Uber Eats</h5>
+                            <a href="#">Sign up to deliver</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <img src="assets/yellow.png" id="bannerImg" alt="Background image"> -->
+
+        <div class="title-map-cities">
+            <div class="title">
+                <h2>Cities near me</h2>
+                <a href="#">View all 500+ cities</a>
+            </div>
+            <div class="map">
+              <!-- WALA PA NGA E. MAKULIT? -->
+            </div>
+            <div class="cities">
+                <div class="row">
+                    <div class="col"><a href="#">Akron</a></div>
+                    <div class="col"><a href="#">Hartford</a></div>
+                    <div class="col"><a href="#">Nashville</a></div>
+                    <div class="col"><a href="#">Providence</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Albuquerque</a></div>
+                    <div class="col"><a href="#">Houston</a></div>
+                    <div class="col"><a href="#">New Orleans</a></div>
+                    <div class="col"><a href="#">Queens</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Bridgeport</a></div>
+                    <div class="col"><a href="#">Indianapolis</a></div>
+                    <div class="col"><a href="#">Oklahoma City</a></div>
+                    <div class="col"><a href="#">San Antonio</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Concord</a></div>
+                    <div class="col"><a href="#">McAllen</a></div>
+                    <div class="col"><a href="#">Omaha</a></div>
+                    <div class="col"><a href="#">Stony Brook</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Dayton</a></div>
+                    <div class="col"><a href="#">Mesa</a></div>
+                    <div class="col"><a href="#">Orlando</a></div>
+                    <div class="col"><a href="#">Tucson</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Paso</a></div>
+                    <div class="col"><a href="#">Milwaukee</a></div>
+                    <div class="col"><a href="#">Palm Bay</a></div>
+                    <div class="col"><a href="#">West Hollywood</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-countries">
+            <div class="title">
+                <h2>Countries with Uber Eats</h2>
+                <a href="#">View all countries</a>
+            </div>
+            <div class="countries">
+                <div class="row">
+                    <div class="col"><a href="#">Australia</a></div>
+                    <div class="col"><a href="#">France</a></div>
+                    <div class="col"><a href="#">Netherlands</a></div>
+                    <div class="col"><a href="#">Sweden</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Belgium</a></div>
+                    <div class="col"><a href="#">Germany</a></div>
+                    <div class="col"><a href="#">New Zealand</a></div>
+                    <div class="col"><a href="#">Switzerland</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Canada</a></div>
+                    <div class="col"><a href="#">Guatemala</a></div>
+                    <div class="col"><a href="#"></a>Panama</div>
+                    <div class="col"><a href="#"></a>Taiwan (ROC)</div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Chile</a></div>
+                    <div class="col"><a href="#">Ireland</a></div>
+                    <div class="col"><a href="#">Poland</a></div>
+                    <div class="col"><a href="#">United Kingdom</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Costa Rica</a></div>
+                    <div class="col"><a href="#">Italy</a></div>
+                    <div class="col"><a href="#">Portugal</a></div>
+                    <div class="col"><a href="#">United States</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Dominican Republic</a></div>
+                    <div class="col"><a href="#">Japan</a></div>
+                    <div class="col"><a href="#">South Africa</a></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Paso</a></div>
+                    <div class="col"><a href="#">Milwaukee</a></div>
+                    <div class="col"><a href="#">Spain</a></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Salvador</a></div>
+                    <div class="col"><a href="#">Mexico</a></div>
+                    <div class="col"><a href="#">Sri Lanka</a></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="upper-footer">
+                <div class="upper-footer-left">
+                    <div class="upper-footer-left-first">
+                        <img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home">                    
+                    </div>
+                    <div class="upper-footer-left-last">
+                        <a href="#"><img src="assets/appstore.png" alt="Download on App Store" id="appstore"></a>
+                        <a href="#"><img src="assets/playstore.png" alt="Get it on Google Play" id="playstore"></a>
+                    </div>
+                </div>
+                <div class="upper-footer-right">
+                    <div class="row">
+                        <div class="col"><a href="#">Get Help</a></div>
+                        <div class="col"><a href="#">Restaurants near me</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Buy gift cards</a></div>
+                        <div class="col"><a href="#">View all cities</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Add your restaurant</a></div>
+                        <div class="col"><a href="#">View all countries</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Sign up to deliver</a></div>
+                        <div class="col"><a href="#">Pickup near me</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Create a business account</a></div>
+                        <div class="col"><a href="#">About Uber Eats</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Promotions</a></div>
+                        <div class="col">
+                            <a href="#" >
+                                <span class="material-icons-outlined" id="translate">translate</span>
+                                English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <!-- BUKAS NA. WALA PA ME TULOG. HAHAHA -->
+            </div>
+        </footer>
+    <!-- <img src="assets/yellow.png" id="bannerImg" alt="Background image"> -->
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

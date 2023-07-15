@@ -18,11 +18,16 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background: white;
 }
 
 .container{
     margin: 0;
     padding: 0;
+}
+
+.head-first-wrapper{
+    background-color: gold;
 }
 
 .header{
@@ -80,6 +85,7 @@ body{
     border-radius: 25px;
     display: flex;
     align-items: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); 
     justify-content: center;
 }
 
@@ -122,13 +128,12 @@ body{
 .banner{
     width: 100vw;
     height: 87vh;
-    background-color: yellow;
 }
 
 .banner .container-fluid{
     width: 100%;
     padding: 20px 40px;
-    margin-top: 12vh;
+    margin-top: 81px;
 }
 
 @font-face {
@@ -149,10 +154,11 @@ body{
 }
 
 .banner .inline{
-    margin-top: 42px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 100%;
+    margin-top: 39px;
+    display: flex;
+    width: auto;
+    gap: 8px;
+    align-items: center;
 }
 
 .inline .form-input{
@@ -164,9 +170,34 @@ body{
     background-color: white;
 }
 
+#form-input-location{
+    width: 540px;
+}
+
+#form-input-dropdown{
+    width: 191px;
+    color: black;
+    font-weight: 500;
+    padding: 8px 14px;
+}
+
 .inline .form-input input{
     padding: 8px 16px 8px 0px;
     width: 100%;
+}
+
+.inline .form-input select{
+    padding: 8px 10px;
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+}
+
+#form-input-dropdown img{
+    height: 22px;
+    width: 28px;
+    padding: 0;
+    margin: 0;
 }
 
 .form-input input::placeholder {
@@ -188,7 +219,7 @@ body{
 
 .banner .link{
     font-size: 14px;
-    margin: 24px 0px 0px;
+    margin: 22px 0px 0px;
 }
 
 .banner .link a{
@@ -200,7 +231,8 @@ body{
     color: white;
     font-weight: 500;
     border-radius: 10px;
-    padding: 12px 16px;
+    padding: 15px;
+    width: 116px;
     background-color: black;
 }
 
@@ -255,6 +287,10 @@ body{
     background-color: #eeeeee;
     padding: 14px 16px 15px 16px;
     color: black;
+}
+
+.sidebar #login:hover{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sidebar .ul-container{
@@ -325,6 +361,10 @@ body{
     background-color: #eeeeee;
 }
 
+.iphone:hover, .android:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .iphone i{
     font-size: 15px;
     color: black;
@@ -338,39 +378,199 @@ body{
     margin-bottom: 2px;
 }
 
-.card-container{
-    margin-top: 80px;
-    padding: 0px 30px;
+#image-container{
+    padding-top: 80px;
+    margin: 0;
     display: flex;
+    width: 100vw;
     align-items: center;
     justify-content: center;
 }
 
-.card-container .row{
-    width: 100%;
+#image-container .row{
+    width: auto;
     margin: 0;
-    padding: 0;
+    background-color: white;
+    padding: 0px 44px 0px 28px;
 }
 
-.card-container .card{
+#image-container .card{
     border: none;
 }
 
-.card-container .card h5{
+#image-container .card h5{
     font-size: 28px;
     font-weight: bold;
     color: black;
 }
 
-.card-container .card-body{
+#image-container .card-body{
     padding: 10px 0px;
 }
 
-.card-body a{
+#image-container .card-body a{
     color: black;
     margin: 8px 0px 0px;
     font-size: 16px;
     font-weight: 500;
+}
+
+.title-map-cities{
+    margin-top: 80px;
+    padding: 0px 50px 0px 40px;
+    width: 100vw;
+}
+
+.title-map-cities .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    padding: 0;
+}
+
+.title-map-cities .title h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.title-map-cities .title a{
+    font-size: 16px;
+    color: black;
+}
+
+.title-map-cities .cities{
+    margin-top: 24px;
+}
+
+.title-map-cities .cities a{
+    text-decoration: none;
+    color: black;
+}
+
+.title-map-cities .cities .row{
+    width: auto;
+    height: 50px;
+}
+
+.title-countries{
+    margin-top: 80px;
+    padding: 0px 50px 0px 40px;
+    width: 100vw;
+    margin-bottom: 80px;
+}
+
+.title-countries .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    padding: 0;
+}
+
+.title-countries .title h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.title-countries .title a{
+    font-size: 16px;
+    color: black;
+}
+
+.title-countries .countries{
+    margin-top: 24px;
+}
+
+.title-countries .countries a{
+    text-decoration: none;
+    color: black;
+}
+
+.title-countries .countries .row{
+    width: auto;
+    height: 50px;
+}
+
+hr{
+    width: 100vw;
+}
+
+footer{
+    margin-top: 72px;
+    width: 100vw;
+    padding: 0px 50px 0px 40px;
+}
+
+footer .upper-footer{
+    display: flex;
+    height: 100%;
+}
+
+footer .upper-footer-left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+footer .upper-footer-left-first{
+    margin: 0px 0px 64px;
+    height: auto;
+}
+
+footer .upper-footer-left-last{
+    margin-top: 90px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: flex-end;
+}
+
+footer .upper-footer-left-last #appstore{
+    width: 155px;
+    height: 40px;
+    margin-left: -10px;
+}
+
+footer .upper-footer-left-last #playstore{
+    width: 134.28px;
+    height: 40px;
+    margin: 0;
+}
+
+footer .upper-footer-right{
+    width: 50%;
+}
+
+footer .upper-footer-right .row{
+    height: 40px;
+}
+
+footer .row a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    align-items: center;
+}
+
+footer .row a #translate{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+footer .row a:hover{
+    text-decoration: underline;
 }
 
 
