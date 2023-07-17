@@ -9,32 +9,84 @@
         <link rel="icon" href="assets/uber-eats-logo.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
         <script src="https://kit.fontawesome.com/93e3069a39.js" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
+
+    <style>
+        .custom-option {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select option {
+  padding-right: 25px; /* Provide space for the icon */
+}
+
+.custom-option .icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  /* Add styles for the icon (e.g., font-size, color) */
+}
+
+.containers {
+  position: relative;
+  overflow: hidden;
+  height: 100px; /* Adjust the height as needed */
+  width: 700px; /* Adjust the width as needed */
+}
+
+.textboxs {
+  margin-top: 3%;
+  position: absolute;
+  top: 0;
+  left: 1;
+  background-color: rgb(204, 204, 204);
+  transition: transform 1s ease-in-out;
+  transform: translateX(-150%);
+}
+
+
+    </style>
 <body>
-    <div class="container">
-        <div class="head-first-wrapper">
-            <div class="header">
-                <div class="container-fluid" id="header-container-fluid">
-                    <div class="navb-logo">
-                        <img src="assets/menu.png" id="menu" alt="menu">
-                        <a href="http://localhost:8080/Kodego/Uber-Eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
+    <header class="header fixed-top" id="header_nav" >
+        <div class="container-fluid" id="header_container">
+            <div class="navb-logo">
+                <img src="assets/menu.png" id="menu" alt="menu">
+                <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
+            </div>
+            <div class="containers" style="margin-left: 5%;">
+                <!-- <input type="text" class="form-control textboxs" /> -->
+                <div class="inline" >
+                <div class="form-input textboxs" id="form-input-locations" style="background-color: #eeeeee9c;">
+                    <div class="img-icon" >
+                        <img src="assets/location-dot-solid.svg" alt="location icon">
                     </div>
-            
-                    <div class="navb-items">
-                        <ul class="main-nav">
-                            <li class="item">
-                                <a href="#" id="logIn" title="Log in">
-                                    <img src="assets/person.png" alt="Person Avatar">
-                                    Log in
-                                </a>
-                            </li>
-                            <li class="item">
-                                <a href="#" id="signUp" title="Sign up">Sign up</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <input type="text" name="search-query" placeholder="Enter delivery address" style="width: 200%; background-color: transparent;">
                 </div>
             </div>
+            </div>
+            
+    
+            <div class="navb-items">
+                <ul class="main-nav">
+                    <li class="item">
+                        <a href="#" id="logIn" title="Log in">
+                            <img src="assets/person.png" alt="Person Avatar">
+                            Log in
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" id="signUp" title="Sign up">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="head-first-wrapper">
             
             <div id="sidebar" class="sidebar">
                 <nav>
@@ -72,20 +124,21 @@
                 </nav>
             </div>
             
-            <div class="banner">
+            <div class="banner" style="background-image: url('assets/yellow.png');margin-top: -12%;background-size: 1600px 800px;height: 800px;background-position: fixed;">
                 <div class="container-fluid" id="banner-container-fluid">
+                    <div style="margin-top: 20%;"></div>
                     <h1>Order food to your door</h1>
                     <div class="inline">
-                        <div class="form-input" id="form-input-location">
+                        <div class="form-input delivery" name="delivery" id="form-input-location">
                             <div class="img-icon">
                                 <img src="assets/location-dot-solid.svg" alt="location icon">
                             </div>
-                            <input type="text" name="search-query" placeholder="Enter delivery address">
+                            <input type="text" name="search-query" id="delivery_address" placeholder="Enter delivery address">
                         </div>
                         <div class="form-input" id="form-input-dropdown">
                             <img src="assets/clock.png" alt="clock">
-                            <select class="category-dropdown">
-                                <option value="option1">Deliver now</option>
+                            <select class="custom-option">
+                                <option value="option1" > Deliver now</option>
                                 <option value="option2">Schedule for later</option>
                             </select>
                             <span class="material-icons-outlined">expand_more</span>                  
@@ -96,7 +149,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="card-container" id="image-container">
             <div class="row">
                 <div class="col">
@@ -135,7 +188,12 @@
                 <a href="#">View all 500+ cities</a>
             </div>
             <div class="map">
-              <!-- WALA PA NGA E. MAKULIT? -->
+              
+              <div class="row">
+                <img src="assets/map.png" style="width: 100%;" float/>
+               
+              </div>
+             
             </div>
             <div class="cities">
                 <div class="row">
@@ -285,6 +343,9 @@
         </footer>
     <!-- <img src="assets/yellow.png" id="bannerImg" alt="Background image"> -->
     </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var menuButton = document.getElementById("menu");
@@ -301,6 +362,47 @@
             });
         });
 
+        $(document).ready(function(){
+        window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+
+        // Add 'header-scrolled' class to the header when scrolled beyond 50 pixels
+        if (window.scrollY > 50) {
+            $("#header_nav").css('background-color','white');
+                $(".textboxs").css('transform','translateX(0%)');
+            // $("#header_container").css('opacity','1');
+            header.classList.add('header-scrolled');
+           
+        
+        }
+        else {
+            $("#header_nav").css('background-color','transparent');
+            $(".textboxs").css('transform','opacity(0%)');
+            
+            // $("#header_container").css('opacity','1');
+            header.classList.remove('header-scrolled');
+            
+            
+            
+        }
+        });
+        $("#delivery_address").on("focus", function(){
+            // alert("Adasd");
+            $(".delivery").css('box-shadow', '0px 2px');
+        });
+
+        $("#delivery_address").on("focusout", function(){
+            // alert("Adasd");
+            $(".delivery").css('box-shadow', '0px 0px');
+        });
+
+
+
+        function show_textbox(){
+            $(".textboxs").css('display','none');
+            
+        }
+    });
+
     </script>
-</body>
 </html>

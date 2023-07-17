@@ -37,6 +37,10 @@ body{
     background-color: white;
 }
 
+.header.fade {
+    background-color: rgba(51, 51, 51, 0.7);
+  }
+
 .header .container-fluid{
     width: 100%;
     display: flex;
@@ -126,8 +130,8 @@ body{
 }
 
 .banner{
-    width: 100vw;
-    height: 87vh;
+    width: 130vw;
+    height: vh;
 }
 
 .banner .container-fluid{
@@ -138,8 +142,8 @@ body{
 
 @font-face {
     font-family: 'CustomFont';
-    src: url('/fonts/83a314e1b88d789f.woff2') format('woff2'),
-         url('/fonts/83a314e1b88d789f.woff2') format('woff');
+    src: url('fonts/83a314e1b88d789f.woff2') format('woff2'),
+         url('fonts/83a314e1b88d789f.woff2') format('woff');
 }
 
 #banner-container-fluid h1{
@@ -172,6 +176,9 @@ body{
 
 #form-input-location{
     width: 540px;
+}
+#form-input-locations{
+    width: 640px;
 }
 
 #form-input-dropdown{
@@ -234,6 +241,9 @@ body{
     padding: 15px;
     width: 116px;
     background-color: black;
+}
+.banner button:hover{
+    background-color: rgb(48, 48, 48);
 }
 
 .sidebar {
@@ -644,6 +654,7 @@ button[type="submit"]:hover{
     background-color: rgb(51, 51, 51);
 } */
 
+
 @media screen and (max-width: 1200px) {
     .img-square{
         height: 300px;
@@ -653,6 +664,10 @@ button[type="submit"]:hover{
     .img-content img{
         height: 300px;
         width: auto;
+    }
+    .inline{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -688,7 +703,12 @@ button[type="submit"]:hover{
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-
+    .inline{
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
     footer{
         grid-template-columns: 50% 50%;
     }
@@ -719,7 +739,7 @@ button[type="submit"]:hover{
         align-items: center;
         justify-content: center;
     }
-
+    
     .img-square{
         width: 100%;
         margin: 0%;
@@ -734,7 +754,12 @@ button[type="submit"]:hover{
 }
 
 @media(max-width:767px){
-
+    .inline{
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
     header .navb-logo h2{
         display: none;
     }
@@ -748,7 +773,12 @@ button[type="submit"]:hover{
 }
 
 @media(max-width: 450px){
-
+    .inline{
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
     .modal-dialog{
         width: 82%;
     }
