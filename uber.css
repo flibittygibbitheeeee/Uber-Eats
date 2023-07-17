@@ -93,8 +93,8 @@ body{
     justify-content: center;
 }
 
-.header .item  #logIn:hover{
-    background-color: rgba(0, 0, 0, 0.2);
+.header .item #logIn:hover{
+    background-color: rgb(214, 214, 214);
 }
 
 .header #logIn{
@@ -123,15 +123,15 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.head-first-wrapper {
+/* .head-first-wrapper {
     padding: 0;
     margin: 0;
     width: 100vw;
-}
+} */
 
 .banner{
     width: 130vw;
-    height: vh;
+    height: 100vh;
 }
 
 .banner .container-fluid{
@@ -767,7 +767,7 @@ footer .privacy-row a:hover{
 @media screen and (max-width: 878px) {
 
     .home{
-        display: block;
+        display: flex;
         width: 100vw;
         height: 100%;
         align-items: center;
@@ -800,6 +800,10 @@ footer .privacy-row a:hover{
     .social-media{
         width: fit-content;
         margin: auto;
+    }
+    .inline{
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 

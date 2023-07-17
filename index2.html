@@ -367,13 +367,9 @@
         var header = document.querySelector('header');
 
         // Add 'header-scrolled' class to the header when scrolled beyond 50 pixels
-        if (window.scrollY > 200) {
+        if (window.scrollY > 50) {
             $("#header_nav").css('background-color','white');
-                // $(".textboxs").css('transform','translateX(0%)');
-            $('.textboxs').css({
-            transform: 'translateX(0%)',
-            opacity: 100
-        });
+                $(".textboxs").css('transform','translateX(0%)');
             // $("#header_container").css('opacity','1');
             header.classList.add('header-scrolled');
            
@@ -381,11 +377,7 @@
         }
         else {
             $("#header_nav").css('background-color','transparent');
-            // $(".textboxs").css('transform','translateX(-300%)');
-            $('.textboxs').css({
-            transform: 'translateX(-500%)',
-            opacity: 0
-        });
+            $(".textboxs").css('transform','translateX(-200%)');
             
             // $("#header_container").css('opacity','1');
             header.classList.remove('header-scrolled');
