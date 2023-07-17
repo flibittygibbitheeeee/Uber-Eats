@@ -12,22 +12,23 @@
 <body>
     
     <div class="form-input select-menu" id="form-input-dropdown">
-        <div class="select-btn">
-            <img src="assets/clock.png" alt="clock">
-            <span class="sBtn-text">Deliver now</span>
+        <button class="select-btn">
+            <div class="sBtn-text">Select time</div>
             <span class="material-icons-outlined">expand_more</span>                  
-        </div>
+        </button>
         <ul class="options">
             <li class="option">
                 <img src="assets/clock.png" alt="clock" id="small-clock">
                 <span class="option-text">Deliver now</span>
             </li>
-            <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                 <span class="material-icons-outlined" id="schedule">today</span>                
                 <span class="option-text">Schedule for later</span>
             </li>
         </ul>
     </div>
+
+    <!-- <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
 
   <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -37,8 +38,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="pickTitle">Pick a time</div>
-                    <select name="" id=""></select>
+                    <div class="date">Pick a time</div>
+                    <select name="date" id="date"></select>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -47,21 +48,26 @@
             </div>
         </div>
     </div>
-    <script>
-        const optionMenu = document.querySelector(".select-menu"),
-                selectBtn = optionMenu.querySelector(".select-btn"),
-                options = optionMenu.querySelector(".option"),
-                sBtn_text = optionMenu.querySelector(".sBtn_text");
-        options.forEach(option => {
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var dropdownButton = document.querySelector('.select-btn');
+    var optionsList = document.querySelector('.options');
+    var optionItems = document.querySelectorAll('.option');
+    var sBtnText = document.querySelector('.sBtn-text');
 
-            console.log(option)
-            // option.addEventListener("click", () =>{
-            //     // let selectedOption = option.querySelector(".option-text").innerText;
+    dropdownButton.addEventListener('click', function() {
+        optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+    });
 
-            //     // console.log()
-            // })
-        })
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    optionItems.forEach(function(option) {
+        option.addEventListener('click', function() {
+            var selectedText = option.innerHTML;
+            sBtnText.innerHTML = selectedText;
+            optionsList.style.display = 'none';
+        });
+    });
+});
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
