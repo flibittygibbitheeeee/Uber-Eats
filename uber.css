@@ -44,7 +44,7 @@ body{
 .header .container-fluid{
     width: 100%;
     display: flex;
-    padding: 20px 40px;
+    padding: 20px 40px; 
     align-items: center;
     justify-content: space-between;
 }
@@ -136,7 +136,7 @@ body{
 
 .banner .container-fluid{
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 40px; 
     margin-top: 81px;
 }
 
@@ -181,28 +181,61 @@ body{
     width: 640px;
 }
 
-#form-input-dropdown{
-    width: 191px;
-    color: black;
-    font-weight: 500;
-    padding: 8px 14px;
-}
-
 .inline .form-input input{
     padding: 8px 16px 8px 0px;
     width: 100%;
 }
 
-.inline .form-input select{
-    padding: 8px 10px;
+#form-input-dropdown{
+    /* width: 191px; */
+    width: 200px;
+    color: black;
+    font-weight: 500;
+}
+
+#form-input-dropdown .select-btn{
+    padding: 8px 10px 20px;
     width: 100%;
     font-weight: 500;
     text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    margin: 0;
+}
+
+.select-menu .options{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+.select-menu .option{
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+}
+
+.select-menu .option:first-child{
+    margin-bottom: 18px;
+}
+
+.select-menu .option #small-clock{
+    height: 18px;
+}
+
+.select-menu .option #schedule{
+    font-size: 18px;
 }
 
 #form-input-dropdown img{
     height: 22px;
-    width: 28px;
+    width: auto;
     padding: 0;
     margin: 0;
 }
@@ -400,6 +433,7 @@ body{
 #image-container .row{
     width: auto;
     margin: 0;
+    /* background-color: aquamarine; */
     background-color: white;
     padding: 0px 44px 0px 28px;
 }
@@ -427,7 +461,7 @@ body{
 
 .title-map-cities{
     margin-top: 80px;
-    padding: 0px 50px 0px 40px;
+    padding: 0px 55px 0px 40px;
     width: 100vw;
 }
 
@@ -448,6 +482,7 @@ body{
 .title-map-cities .title a{
     font-size: 16px;
     color: black;
+    font-weight: 100;
 }
 
 .title-map-cities .cities{
@@ -466,9 +501,9 @@ body{
 
 .title-countries{
     margin-top: 80px;
-    padding: 0px 50px 0px 40px;
+    padding: 0px 55px 0px 40px;
     width: 100vw;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
 }
 
 .title-countries .title{
@@ -511,7 +546,7 @@ hr{
 footer{
     margin-top: 72px;
     width: 100vw;
-    padding: 0px 50px 0px 40px;
+    padding: 0px 30px 65px 40px;
 }
 
 footer .upper-footer{
@@ -583,76 +618,91 @@ footer .row a:hover{
     text-decoration: underline;
 }
 
+footer hr{
+    width: 92.5vw;
+    color: #d3d3d3;
+}
 
-/*  .head-first-wrapper #bannerImg {
-    width: 100vw; 
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-} 
+footer .lower-footer{
+    padding-top: 20px;
+}
 
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-40%, -50%);
-    text-align: left;
+.lower-footer-first{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.lower-footer-first .logos{
+    width: 55%;
+}
+
+.lower-footer-first .logos a{
     color: black;
+    text-decoration: none;
+    margin-right: 20px;
 }
 
-.banner-text > i {
-    position: fixed;
-    top: 60%;
-    left: 3%;
-    transform: translate(-40%, -50%);
-    text-align: left;
+.lower-footer-first .logos i{
+    font-size: 18px;
+}
+
+.lower-footer-first .privacy{
+    width: 45%;
+    padding: 0;
+}
+
+.lower-footer-first .privacy a{
+    font-size: 14px;
+}
+
+footer .privacy-row a{
+    text-decoration: none;
     color: black;
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    align-items: center;
 }
 
-@font-face {
-    font-family: 'CustomFont';
-    src: url('/fonts/83a314e1b88d789f.woff2') format('woff2'),
-         url('/fonts/83a314e1b88d789f.woff2') format('woff');
+footer .privacy-row a:hover{
+    text-decoration: underline;
 }
 
-.banner-text h1 {
-    font-size: 52px;
-    font-family: 'CustomFont', Arial, sans-serif;
-    font-weight: 700;  
+.lower-footer-first .privacy .column{
+    position: relative;
+    width: fit-content;
+    padding: 0;
 }
 
-.banner-text p {
-    font-size: 15px;
+.lower-footer-first .privacy-row{
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
-input[type="text"] {
-    padding: 15px;
-    width: 550px;
-    cursor: pointer;
+.lower-footer-last{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    padding-right: 30px;
+    align-items: center;
+    column-gap: 50px;
+    justify-content: flex-end;
 }
 
-select {
-    padding: 15px;
-    font-size: 16px;
-    cursor: pointer;
+.lower-footer-last p{
+    font-size: 14px;
 }
 
-button[type="submit"] {
-    padding: 20px 10px;
-    padding: 15px 15px;
-    border-radius: 10px;
-    background-color: black;
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.lower-footer-last a{
+    color: black;
+    text-decoration: none;
 }
 
-button[type="submit"]:hover{
-    background-color: rgb(51, 51, 51);
-} */
+.lower-footer-last a:hover{
+    text-decoration: underline;
+}
 
 
 @media screen and (max-width: 1200px) {
