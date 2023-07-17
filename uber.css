@@ -174,28 +174,61 @@ body{
     width: 540px;
 }
 
-#form-input-dropdown{
-    width: 191px;
-    color: black;
-    font-weight: 500;
-    padding: 8px 14px;
-}
-
 .inline .form-input input{
     padding: 8px 16px 8px 0px;
     width: 100%;
 }
 
-.inline .form-input select{
-    padding: 8px 10px;
+#form-input-dropdown{
+    /* width: 191px; */
+    width: 200px;
+    color: black;
+    font-weight: 500;
+}
+
+#form-input-dropdown .select-btn{
+    padding: 8px 10px 20px;
     width: 100%;
     font-weight: 500;
     text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    margin: 0;
+}
+
+.select-menu .options{
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+.select-menu .option{
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+}
+
+.select-menu .option:first-child{
+    margin-bottom: 18px;
+}
+
+.select-menu .option #small-clock{
+    height: 18px;
+}
+
+.select-menu .option #schedule{
+    font-size: 18px;
 }
 
 #form-input-dropdown img{
     height: 22px;
-    width: 28px;
+    width: auto;
     padding: 0;
     margin: 0;
 }
@@ -460,7 +493,7 @@ body{
     margin-top: 80px;
     padding: 0px 55px 0px 40px;
     width: 100vw;
-    margin-bottom: 80px;
+    margin-bottom: 55px;
 }
 
 .title-countries .title{
@@ -503,7 +536,7 @@ hr{
 footer{
     margin-top: 72px;
     width: 100vw;
-    padding: 0px 30px 0px 40px;
+    padding: 0px 30px 65px 40px;
 }
 
 footer .upper-footer{
