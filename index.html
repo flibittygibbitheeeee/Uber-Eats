@@ -16,7 +16,7 @@
     <header class="header fixed-top" id="header_nav" >
         <div class="container-fluid" id="header_container">
             <div class="navb-logo">
-                <img src="assets/menu.png" id="menu" alt="menu">
+                <img src="assets/menu.png" id="menu" alt="menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
             </div>
             <div class="containers" style="margin-left: 5%;">
@@ -49,42 +49,47 @@
 
     <div class="container">
         <div class="head-first-wrapper">          
-            <div id="sidebar" class="sidebar">
-                <nav>
-                    <a href="#" id="signup">Sign up</a>
-                    <a href="#" id="login">Log in</a>
-                    <div class="ul-container">
-                        <ul>
-                            <li>
-                                <a href="#">Create a business account</a>
-                            </li>
-                            <li>
-                                <a href="#">Add your restaurant</a>
-                            </li>
-                            <li>
-                                <a href="#">Sign up to deliver</a>
-                            </li>
-                        </ul>                    
-                    </div>
-                    <div class="side-foot">
-                        <div class="side-foot-up">
-                            <img src="assets/ubereats.png" alt="ubereats">
-                            <p>There's more to love in the app.</p>                                                      
+            <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <nav>
+                        <a href="#" id="signup">Sign up</a>
+                        <a href="#" id="login">Log in</a>
+                        <div class="ul-container">
+                            <ul>
+                                <li>
+                                    <a href="#">Create a business account</a>
+                                </li>
+                                <li>
+                                    <a href="#">Add your restaurant</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sign up to deliver</a>
+                                </li>
+                            </ul>                    
                         </div>
-                        <div class="side-foot-dwn">
-                            <div class="iphone">
-                                <i class="fa-brands fa-apple"></i>
-                                <a href="#">iPhone</a>
+                        <div class="side-foot">
+                            <div class="side-foot-up">
+                                <img src="assets/ubereats.png" alt="ubereats">
+                                <p>There's more to love in the app.</p>                                                      
                             </div>
-                            <div class="android">
-                                <img src="assets/andrd.png" alt="ubereats">
-                                <a href="#">Android</a>
-                            </div>                                                        
-                         </div>
-                    </div>
-                </nav>
+                            <div class="side-foot-dwn">
+                                <div class="iphone">
+                                    <i class="fa-brands fa-apple"></i>
+                                    <a href="#">iPhone</a>
+                                </div>
+                                <div class="android">
+                                    <img src="assets/andrd.png" alt="ubereats">
+                                    <a href="#">Android</a>
+                                </div>                                                        
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-            
+                
             <div class="banner" style="background-image: url('assets/yellow.png');margin-top: -12%;background-size: 1600px 800px;height: 800px;background-position: fixed;">
                 <div class="container-fluid" id="banner-container-fluid">
                     <div style="margin-top: 20%;"></div>
@@ -98,8 +103,10 @@
                         </div>
                         <div class="form-input select-menu" id="form-input-dropdown">
                             <button class="select-btn">
-                                <img src="assets/clock.png" alt="clock" id="clock">
-                                <div class="sBtn-text">Deliver now</div>
+                                <div class="sBtn-text">
+                                    <span class="material-icons-outlined">tune</span>
+                                    Select time
+                                </div>
                                 <span class="material-icons-outlined">expand_more</span>                  
                             </button>
                             <ul class="options">
@@ -123,7 +130,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <span class="material-icons-outlined btn-close" id="btn-close" data-bs-dismiss="modal" aria-label="Close">close</span>
                         </div>
                         <div class="modal-body">
                             <div class="date">Pick a date</div>
@@ -132,8 +139,8 @@
                             <select name="time" id="time"></select>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <a href="#" id="sched">Schedule</a>
+                            <a href="#" id="dlvr">Deliver now</a>
                         </div>
                     </div>
                 </div>
@@ -328,7 +335,27 @@
                 </div>
             </div>
             <div class="lower-footer">
-                <!-- BUKAS NA. WALA PA ME TULOG. HAHAHA -->
+                <div class="lower-footer-first">
+                    <div class="logos">
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="privacy">
+                        <nav>
+                            <div class="privacy-row">
+                                <div class="column"><a href="#">Privacy Policy</a></div>
+                                <div class="column"><a href="#">Terms</a></div>
+                                <div class="column"><a href="#">Pricing</a></div>
+                                <div class="column"><a href="#">Do not sell or share my personal information</a></div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="lower-footer-last">
+                    <p>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+                    <p>&#169; 2023 Uber Technologies Inc.</p>
+                </div>
             </div>
         </footer>
     </div>

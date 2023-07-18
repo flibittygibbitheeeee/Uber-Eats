@@ -1,73 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="uber.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/93e3069a39.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uber Eats | Food Delivery and Takeout | Order Online from Restaurants Near You</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="uber.css">    
+        <link rel="icon" href="assets/uber-eats-logo.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/93e3069a39.js" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
+
+    <style>
+        .custom-option {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select option {
+  padding-right: 25px; /* Provide space for the icon */
+}
+
+.custom-option .icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  /* Add styles for the icon (e.g., font-size, color) */
+}
+
+.containers {
+  position: relative;
+  overflow: hidden;
+  height: 100px; /* Adjust the height as needed */
+  width: 700px; /* Adjust the width as needed */
+}
+
+.textboxs {
+  margin-top: 3%;
+  position: absolute;
+  top: 0;
+  left: 1;
+  background-color: rgb(204, 204, 204);
+  transition: transform 1s ease-in-out;
+  transform: translateX(-150%);
+}
+
+
+    </style>
 <body>
+    <header class="header fixed-top" id="header_nav" >
+        <div class="container-fluid" id="header_container">
+            <div class="navb-logo">
+                <img src="assets/menu.png" id="menu" alt="menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
+            </div>
+            <div class="containers" style="margin-left: 5%;">
+                <!-- <input type="text" class="form-control textboxs" /> -->
+                <div class="inline" >
+                    <div class="form-input textboxs" id="form-input-locations" style="background-color: #EEEEEE;">
+                        <div class="img-icon" >
+                            <img src="assets/location-dot-solid.svg" alt="location icon">
+                        </div>
+                        <input type="text" name="search-query" placeholder="Enter delivery address" style="width: 200%; background-color: transparent;">
+                    </div>  
+                </div>
+            </div>
     
-    <div class="form-input select-menu" id="form-input-dropdown">
-        <button class="select-btn">
-            <div class="sBtn-text">Select time</div>
-            <span class="material-icons-outlined">expand_more</span>                  
-        </button>
-        <ul class="options">
-            <li class="option">
-                <img src="assets/clock.png" alt="clock" id="small-clock">
-                <span class="option-text">Deliver now</span>
-            </li>
-            <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
-                <span class="material-icons-outlined" id="schedule">today</span>                
-                <span class="option-text">Schedule for later</span>
-            </li>
-        </ul>
-    </div>
+            <div class="navb-items">
+                <ul class="main-nav">
+                    <li class="item">
+                        <a href="#" id="logIn" title="Log in">
+                            <img src="assets/person.png" alt="Person Avatar">
+                            Log in
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" id="signUp" title="Sign up">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-    <!-- <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+    <div class="container">
+        <div class="head-first-wrapper">          
+            <div class="offcanvas offcanvas-start sidebar" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <nav>
+                        <a href="#" id="signup">Sign up</a>
+                        <a href="#" id="login">Log in</a>
+                        <div class="ul-container">
+                            <ul>
+                                <li>
+                                    <a href="#">Create a business account</a>
+                                </li>
+                                <li>
+                                    <a href="#">Add your restaurant</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sign up to deliver</a>
+                                </li>
+                            </ul>                    
+                        </div>
+                        <div class="side-foot">
+                            <div class="side-foot-up">
+                                <img src="assets/ubereats.png" alt="ubereats">
+                                <p>There's more to love in the app.</p>                                                      
+                            </div>
+                            <div class="side-foot-dwn">
+                                <div class="iphone">
+                                    <i class="fa-brands fa-apple"></i>
+                                    <a href="#">iPhone</a>
+                                </div>
+                                <div class="android">
+                                    <img src="assets/andrd.png" alt="ubereats">
+                                    <a href="#">Android</a>
+                                </div>                                                        
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+                
+            <div class="banner" style="background-image: url('assets/yellow.png');margin-top: -12%;background-size: 1600px 800px;height: 800px;background-position: fixed;">
+                <div class="container-fluid" id="banner-container-fluid">
+                    <div style="margin-top: 20%;"></div>
+                    <h1>Order food to your door</h1>
+                    <div class="inline">
+                        <div class="form-input delivery" name="delivery" id="form-input-location">
+                            <div class="img-icon">
+                                <img src="assets/location-dot-solid.svg" alt="location icon">
+                            </div>
+                            <input type="text" name="search-query" id="delivery_address" placeholder="Enter delivery address">
+                        </div>
+                        <div class="form-input select-menu" id="form-input-dropdown">
+                            <button class="select-btn">
+                                <div class="sBtn-text">Select time</div>
+                                <span class="material-icons-outlined">expand_more</span>                  
+                            </button>
+                            <ul class="options">
+                                <li class="option">
+                                    <img src="assets/clock.png" alt="clock" id="small-clock">
+                                    <span class="option-text">Deliver now</span>
+                                </li>
+                                <li class="option" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                    <span class="material-icons-outlined" id="schedule">today</span>                
+                                    <span class="option-text">Schedule for later</span>
+                                </li>
+                            </ul>
+                        </div>                    
+                        <button type="submit">Find Food</button>
+                    </div>
+                    <div class="link"><a href="#">Sign In</a> for your recent addresses</div>
+                </div>
+            </div>
 
-  <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="date">Pick a time</div>
-                    <select name="date" id="date"></select>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="date">Pick a date</div>
+                            <select name="date" id="date"></select>
+                            <div class="time">Pick a time</div>
+                            <select name="time" id="time"></select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <div class="card-container" id="image-container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/88d55f7112efe55f.webp" alt="Feed your employees" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Feed your employees</h5>
+                            <a href="#">Create a business account</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/711d51ca1b458931.webp" alt="Your restaurant, delivered" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Your restaurant, delivered</h5>
+                            <a href="#">Add your restaurant</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="assets/16522a701585873b.webp" alt="Deliver with Uber Eats" class="img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title">Deliver with Uber Eats</h5>
+                            <a href="#">Sign up to deliver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-map-cities">
+            <div class="title">
+                <h2>Cities near me</h2>
+                <a href="#">View all 500+ cities</a>
+            </div>
+            <div class="map">
+              
+              <div class="row">
+                <img src="assets/map.png" style="width: 100%;" float/>
+               
+              </div>
+             
+            </div>
+            <div class="cities">
+                <div class="row">
+                    <div class="col"><a href="#">Akron</a></div>
+                    <div class="col"><a href="#">Hartford</a></div>
+                    <div class="col"><a href="#">Nashville</a></div>
+                    <div class="col"><a href="#">Providence</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Albuquerque</a></div>
+                    <div class="col"><a href="#">Houston</a></div>
+                    <div class="col"><a href="#">New Orleans</a></div>
+                    <div class="col"><a href="#">Queens</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Bridgeport</a></div>
+                    <div class="col"><a href="#">Indianapolis</a></div>
+                    <div class="col"><a href="#">Oklahoma City</a></div>
+                    <div class="col"><a href="#">San Antonio</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Concord</a></div>
+                    <div class="col"><a href="#">McAllen</a></div>
+                    <div class="col"><a href="#">Omaha</a></div>
+                    <div class="col"><a href="#">Stony Brook</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Dayton</a></div>
+                    <div class="col"><a href="#">Mesa</a></div>
+                    <div class="col"><a href="#">Orlando</a></div>
+                    <div class="col"><a href="#">Tucson</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Paso</a></div>
+                    <div class="col"><a href="#">Milwaukee</a></div>
+                    <div class="col"><a href="#">Palm Bay</a></div>
+                    <div class="col"><a href="#">West Hollywood</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title-countries">
+            <div class="title">
+                <h2>Countries with Uber Eats</h2>
+                <a href="#">View all countries</a>
+            </div>
+            <div class="countries">
+                <div class="row">
+                    <div class="col"><a href="#">Australia</a></div>
+                    <div class="col"><a href="#">France</a></div>
+                    <div class="col"><a href="#">Netherlands</a></div>
+                    <div class="col"><a href="#">Sweden</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Belgium</a></div>
+                    <div class="col"><a href="#">Germany</a></div>
+                    <div class="col"><a href="#">New Zealand</a></div>
+                    <div class="col"><a href="#">Switzerland</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Canada</a></div>
+                    <div class="col"><a href="#">Guatemala</a></div>
+                    <div class="col"><a href="#"></a>Panama</div>
+                    <div class="col"><a href="#"></a>Taiwan (ROC)</div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Chile</a></div>
+                    <div class="col"><a href="#">Ireland</a></div>
+                    <div class="col"><a href="#">Poland</a></div>
+                    <div class="col"><a href="#">United Kingdom</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Costa Rica</a></div>
+                    <div class="col"><a href="#">Italy</a></div>
+                    <div class="col"><a href="#">Portugal</a></div>
+                    <div class="col"><a href="#">United States</a></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">Dominican Republic</a></div>
+                    <div class="col"><a href="#">Japan</a></div>
+                    <div class="col"><a href="#">South Africa</a></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Paso</a></div>
+                    <div class="col"><a href="#">Milwaukee</a></div>
+                    <div class="col"><a href="#">Spain</a></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><a href="#">El Salvador</a></div>
+                    <div class="col"><a href="#">Mexico</a></div>
+                    <div class="col"><a href="#">Sri Lanka</a></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div class="upper-footer">
+                <div class="upper-footer-left">
+                    <div class="upper-footer-left-first">
+                        <img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home">                    
+                    </div>
+                    <div class="upper-footer-left-last">
+                        <a href="#"><img src="assets/appstore.png" alt="Download on App Store" id="appstore"></a>
+                        <a href="#"><img src="assets/playstore.png" alt="Get it on Google Play" id="playstore"></a>
+                    </div>
+                </div>
+                <div class="upper-footer-right">
+                    <div class="row">
+                        <div class="col"><a href="#">Get Help</a></div>
+                        <div class="col"><a href="#">Restaurants near me</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Buy gift cards</a></div>
+                        <div class="col"><a href="#">View all cities</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Add your restaurant</a></div>
+                        <div class="col"><a href="#">View all countries</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Sign up to deliver</a></div>
+                        <div class="col"><a href="#">Pickup near me</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Create a business account</a></div>
+                        <div class="col"><a href="#">About Uber Eats</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a href="#">Promotions</a></div>
+                        <div class="col">
+                            <a href="#" >
+                                <span class="material-icons-outlined" id="translate">translate</span>
+                                English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <!-- BUKAS NA. WALA PA ME TULOG. HAHAHA -->
+            </div>
+        </footer>
     </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var dropdownButton = document.querySelector('.select-btn');
-    var optionsList = document.querySelector('.options');
-    var optionItems = document.querySelectorAll('.option');
-    var sBtnText = document.querySelector('.sBtn-text');
-
-    dropdownButton.addEventListener('click', function() {
-        optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
-    });
-
-    optionItems.forEach(function(option) {
-        option.addEventListener('click', function() {
-            var selectedText = option.innerHTML;
-            sBtnText.innerHTML = selectedText;
-            optionsList.style.display = 'none';
-        });
-    });
-});
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="script.js"></script>
 </html>
