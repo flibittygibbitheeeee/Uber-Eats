@@ -1,19 +1,3 @@
-// SIDEBAR MENU
-
-document.addEventListener("DOMContentLoaded", function() {
-    var menuButton = document.getElementById("menu");
-    var sidebar = document.getElementById("sidebar");
-
-    menuButton.addEventListener("click", function() {
-        sidebar.classList.add("open");
-    });
-
-    document.addEventListener("click", function(event) {
-        if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
-            sidebar.classList.remove("open");
-        }
-    });
-});
 
 // HEADER TEXTBOX ANIMATION
 
@@ -108,45 +92,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // SCHEDULE FOR LATER TIME OPTIONS
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     var timeSelect = document.getElementById('time');
-
-//     var startTime = new Date();
-//     startTime.setHours(4, 30, 0, 0); // Set the initial start time
-
-//     var endTime = new Date();
-//     endTime.setHours(6, 0, 0, 0); // Set the end time
-
-//     var interval = 30; // Set the interval in minutes
-
-//     while (startTime < endTime) {
-//       var optionText = formatTime(startTime);
-
-//       var option = document.createElement('option');
-//       option.value = optionText;
-//       option.textContent = optionText;
-//       timeSelect.appendChild(option);
-
-//       startTime.setMinutes(startTime.getMinutes() + interval); // Increment the start time by the interval
-//     }
-
-//     function formatTime(time) {
-//       var options = { hour: 'numeric', minute: '2-digit' };
-//       var formattedTime = time.toLocaleTimeString('en-US', options);
-//       var endTime = new Date(time.getTime() + interval * 60000);
-//       var formattedEndTime = endTime.toLocaleTimeString('en-US', options);
-//       return formattedTime + ' - ' + formattedEndTime;
-//     }
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     var timeSelect = document.getElementById('time');
 
     var startTime = new Date();
-    startTime.setHours(4, 45, 0, 0); // Set the start time to 4:45 AM
+    startTime.setHours(4, 45, 0, 0); // Set the initial start time
 
     var endTime = new Date();
-    endTime.setHours(0, 0, 0, 0); // Set the end time to 12:00 AM
+    endTime.setHours(23, 0, 0, 0); // Set the end time
 
     var interval = 30; // Set the interval in minutes
 

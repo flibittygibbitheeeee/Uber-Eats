@@ -24,6 +24,7 @@ body{
 .container{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .header{
@@ -290,41 +291,47 @@ body{
     width: 116px;
     background-color: black;
 }
+
 .banner button:hover{
     background-color: rgb(48, 48, 48);
 }
 
-.sidebar {
-    width: 300px;
-    height: 100vh;
-    position: fixed;
+.offcanvas-start{
+    width: 300px !important;
     padding: 24px;
-    top: 0;
-    left: -300px;
-    background-color: #fff;
-    transition: left 0.3s ease-in-out;
-    z-index: 9999;
-    min-height: calc(100vh - 72px);
 }
 
-.sidebar.open {
-    left: 0;
+.offcanvas-header{
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.sidebar a{
+.offcanvas-header .btn-close{
+    font-weight: 900;
+}
+
+.offcanvas-body{
+    padding: 0;
+}
+
+.offcanvas-body a{
     text-decoration: none;
     color: black;
 }
 
-.sidebar nav{
+.offcanvas-body nav{
     height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
+    margin: 0;
 }
 
-.sidebar #signup{
+.offcanvas-body #signup{
     width: 100%;
     border-radius: 8px;
     text-align: center;
@@ -335,7 +342,7 @@ body{
     background: black;
 }
 
-.sidebar #login{
+.offcanvas-body #login{
     margin-top: 8px;
     width: 100%;
     border-radius: 8px;
@@ -347,25 +354,29 @@ body{
     color: black;
 }
 
-.sidebar #login:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+.offcanvas-body #login:hover{
+    background-color: rgb(214, 214, 214);
 }
 
-.sidebar .ul-container{
+.offcanvas-body #signup:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.offcanvas-body .ul-container{
     width: 100%;
     margin-top: 22px;
 }
 
-.sidebar ul{
+.offcanvas-body ul{
     padding: 0;
 }
 
-.sidebar ul li{
+.offcanvas-body ul li{
     margin-bottom: 11px;
     width: 100%;
 }
 
-.sidebar ul li a{
+.offcanvas-body ul li a{
     font-size: 14px;
     font-weight: 500;
     margin: 12px 0px;
@@ -420,7 +431,7 @@ body{
 }
 
 .iphone:hover, .android:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .iphone i{
@@ -434,6 +445,96 @@ body{
     width: auto;
     margin-left: 1px;
     margin-bottom: 2px;
+}
+
+.modal select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    -webkit-appearance: none; /* Add this vendor prefix */
+    -moz-appearance: none; /* Add this vendor prefix */
+    appearance: none;
+    background-image: url('assets/dropdown.png'); /* Add your arrow icon path here */
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+}
+
+.modal select:focus {
+    outline: none;
+    border-bottom: 3px solid black; 
+}
+  
+.modal .modal-dialog{
+    width: 470px;
+}
+
+.modal .modal-content{
+    padding: 10px;
+}
+
+.modal #sched{
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 14px 16px 15px 16px;
+    background: black;
+    text-decoration: none;
+}
+
+.modal #dlvr{
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    background-color: #eeeeee;
+    padding: 14px 16px 15px 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.modal #dlvr:hover{
+    background-color: rgb(214, 214, 214);
+}
+
+.modal #sched:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal .modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: none;
+    padding: 10px 0px 0px 0px;
+}
+
+.modal #btn-close{
+    font-weight: 900;
+    color: black;
+    font-size: 24px;
+    margin-left: 5px;
+    justify-self: flex-start;
+    background: none;
+}
+
+.modal-body .date, .modal-body .time{
+    font-size: 32px;
+    color: black;
+    font-weight: 900;
+}
+
+.modal .modal-footer{
+    border-top: none;
 }
 
 #image-container{
