@@ -142,7 +142,7 @@ body{
     position: relative;
     overflow: hidden;
     height: 100px; /* Adjust the height as needed */
-    width: 700px; /* Adjust the width as needed */
+    width: 45vw; /* Adjust the width as needed */
   }
   
   .textboxs {
@@ -192,6 +192,7 @@ body{
     margin-top: 39px;
     display: flex;
     width: auto;
+    padding: 0;
     gap: 8px;
     align-items: center;
 }
@@ -896,8 +897,26 @@ footer .privacy-row a:hover{
         display: none;
     }
 
+    .banner .inline{
+        display: block;
+    }
+
+    #form-input-location{
+        margin-bottom: 20px;
+    }
+
+    #form-input-dropdown{
+        width: 25vw;
+        margin-right: 8vw;
+    }
+
     .containers{
         width: 60vw;
+    }
+
+    .banner button{
+        width: 25vw;
+        margin-bottom: 10px;
     }
 
     .lower-footer-first{
@@ -917,45 +936,9 @@ footer .privacy-row a:hover{
 }
 
 @media screen and (max-width: 878px) {
-
-    .home{
-        display: flex;
-        width: 100vw;
-        height: 100%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .home-content{
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .img-content{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     
-    .img-square{
-        width: 100%;
-        margin: 0%;
-        display: none;
-        border-radius: 10px;
-    }
-   
-    .social-media{
-        width: fit-content;
-        margin: auto;
-    }
-    .inline{
-        display: flex;
-        flex-wrap: wrap;
+    body{
+        background: yellow;
     }
 }
 
