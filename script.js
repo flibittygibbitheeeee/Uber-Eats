@@ -6,7 +6,7 @@ $(document).ready(function(){
         var header = document.querySelector('header');
 
         // Add 'header-scrolled' class to the header when scrolled beyond 50 pixels
-        if (window.scrollY > 200) {
+        if (window.scrollY > 500) {
             $("#header_nav").css('background-color','white');
                 // $(".textboxs").css('transform','translateX(0%)');
             $('.textboxs').css({
@@ -20,7 +20,7 @@ $(document).ready(function(){
             $("#header_nav").css('background-color','transparent');
             // $(".textboxs").css('transform','translateX(-300%)');
             $('.textboxs').css({
-                transform: 'translateX(-500%)',
+                transform: 'translateX(-300%)',
                 opacity: 0
             });
         
