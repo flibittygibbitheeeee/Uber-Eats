@@ -11,44 +11,6 @@
         <script src="https://kit.fontawesome.com/93e3069a39.js" crossorigin="anonymous"></script>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
-
-    <style>
-        .custom-option {
-  position: relative;
-  display: inline-block;
-}
-
-.custom-select option {
-  padding-right: 25px; /* Provide space for the icon */
-}
-
-.custom-option .icon {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  /* Add styles for the icon (e.g., font-size, color) */
-}
-
-.containers {
-  position: relative;
-  overflow: hidden;
-  height: 100px; /* Adjust the height as needed */
-  width: 700px; /* Adjust the width as needed */
-}
-
-.textboxs {
-  margin-top: 3%;
-  position: absolute;
-  top: 0;
-  left: 1;
-  background-color: rgb(204, 204, 204);
-  transition: transform 1s ease-in-out;
-  transform: translateX(-150%);
-}
-
-
-    </style>
 <body>
     <header class="header fixed-top" id="header_nav" >
         <div class="container-fluid" id="header_container">
@@ -56,9 +18,9 @@
                 <img src="assets/menu.png" id="menu" alt="menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
                 <a href="http://localhost:8080/Uber-eats/"><img src="assets/97c43f8974e6c876.svg" alt="Uber Eats Home"></a>
             </div>
-            <div class="containers" style="margin-left: 5%;">
+            <div class="containers">
                 <!-- <input type="text" class="form-control textboxs" /> -->
-                <div class="inline" >
+                <div class="inline" style="border: 1px solid black; margin: 0;">
                     <div class="form-input textboxs" id="form-input-locations" style="background-color: #EEEEEE;">
                         <div class="img-icon" >
                             <img src="assets/location-dot-solid.svg" alt="location icon">

@@ -60,6 +60,7 @@ body{
     width: 18px;
     height: 17px;
     cursor: pointer;
+    display: none;
 }
 
 .header .navb-items{
@@ -121,11 +122,40 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* .head-first-wrapper {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-} */
+.custom-option {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-select option {
+    padding-right: 25px; /* Provide space for the icon */
+}
+
+.custom-option .icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    /* Add styles for the icon (e.g., font-size, color) */
+}
+
+.containers {
+    position: relative;
+    overflow: hidden;
+    background: #331616;
+    height: 90px; /* Adjust the height as needed */
+    width: 45vw; /* Adjust the width as needed */
+}
+
+.textboxs {
+    margin-top: 3%;
+    position: absolute;
+    top: 0;
+    left: 1;
+    background-color: rgb(204, 204, 204);
+    transition: transform 1s ease-in-out;
+    transform: translateX(-150%);
+}
 
 .banner{
     width: 130vw;
@@ -835,49 +865,50 @@ footer .privacy-row a:hover{
         display: flex;
         flex-wrap: wrap;
     }
+
+    body{
+        background-color: red;
+    }
+
 }
 
 @media(max-width:992px){
     body{
         width: 100vw;
         overflow-x: hidden;
+        background-color: aquamarine;
     }
 
     header .container-fluid{
         padding: 0 5%;
+    }
+
+    .header .navb-logo #menu{
+        display: block;
     }
     
     .navb-items{
         display: none;
     }
 
-    header .mobile-toggler{
-        display: block;
+    .containers{
+        width: 60vw;
     }
 
-    .home-content h1, .home-content h2, .home-content h3{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    .lower-footer-first{
+        width: 100%;
     }
 
-    .cv{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    .lower-footer .logos{
+        background-color: rgb(184, 222, 135);
+        width: 30%;
     }
 
-    .social-media{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    .lower-footer .privacy{
+        background-color: burlywood;
+        width: 70%;
     }
-    .inline{
-        
-        display: flex;
-        flex-wrap: wrap;
-    
-    }
-    footer{
-        grid-template-columns: 50% 50%;
-    }
+
 }
 
 @media screen and (max-width: 878px) {
