@@ -12,43 +12,6 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
 
-    <style>
-        .custom-option {
-  position: relative;
-  display: inline-block;
-}
-
-.custom-select option {
-  padding-right: 25px; /* Provide space for the icon */
-}
-
-.custom-option .icon {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  /* Add styles for the icon (e.g., font-size, color) */
-}
-
-.containers {
-  position: relative;
-  overflow: hidden;
-  height: 100px; /* Adjust the height as needed */
-  width: 700px; /* Adjust the width as needed */
-}
-
-.textboxs {
-  margin-top: 3%;
-  position: absolute;
-  top: 0;
-  left: 1;
-  background-color: rgb(204, 204, 204);
-  transition: transform 1s ease-in-out;
-  transform: translateX(-150%);
-}
-
-
-    </style>
 <body>
     <header class="header fixed-top" id="header_nav" >
         <div class="container-fluid" id="header_container">
@@ -135,7 +98,8 @@
                         </div>
                         <div class="form-input select-menu" id="form-input-dropdown">
                             <button class="select-btn">
-                                <div class="sBtn-text">Select time</div>
+                                <img src="assets/clock.png" alt="clock" id="clock">
+                                <div class="sBtn-text">Deliver now</div>
                                 <span class="material-icons-outlined">expand_more</span>                  
                             </button>
                             <ul class="options">

@@ -119,7 +119,39 @@ body{
 .header .item  #signUp:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
-
+.custom-option {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select option {
+    padding-right: 25px; /* Provide space for the icon */
+  }
+  
+  .custom-option .icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    /* Add styles for the icon (e.g., font-size, color) */
+  }
+  
+  .containers {
+    position: relative;
+    overflow: hidden;
+    height: 100px; /* Adjust the height as needed */
+    width: 700px; /* Adjust the width as needed */
+  }
+  
+  .textboxs {
+    margin-top: 3%;
+    position: absolute;
+    top: 0;
+    left: 1;
+    background-color: rgb(204, 204, 204);
+    transition: transform 1s ease-in-out;
+    transform: translateX(-150%);
+  }
 /* .head-first-wrapper {
     padding: 0;
     margin: 0;
@@ -718,6 +750,8 @@ footer .privacy-row a:hover{
 .lower-footer-last a:hover{
     text-decoration: underline;
 }
+
+
 
 
 @media screen and (max-width: 1200px) {
